@@ -24,6 +24,7 @@ import (
 
 	"github.com/spf13/cobra"
 	"k8s.io/apimachinery/pkg/util/wait"
+	_ "k8s.io/apiserver/pkg/features" // add the kubernetes feature gates
 	cloudprovider "k8s.io/cloud-provider"
 	"k8s.io/cloud-provider/app"
 	"k8s.io/cloud-provider/options"
@@ -33,7 +34,6 @@ import (
 	_ "k8s.io/component-base/metrics/prometheus/clientgo" // for client metric registration
 	_ "k8s.io/component-base/metrics/prometheus/version"  // for version metric registration
 	"k8s.io/klog"
-	_ "k8s.io/kubernetes/pkg/features" // add the kubernetes feature gates
 	"k8s.io/legacy-cloud-providers/gce"
 )
 
